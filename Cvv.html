@@ -9,15 +9,28 @@
 </head>
 <body>
     <header>
+        
         <a href="#" class="logo">AYUSH JADHAV</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="Cvv.html" class="active">CV</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <nav class="navbar">
+            
+
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+
+        <div class="navbar-links">
+            <a href="index.html"> Home</a>
+            <a href="/services.html" >Services</a>
+            <a href="/skills.html" >Skills</a>
+            <a href="projects.html" >Projects</a>
+            <a href="Cvv.html">CV</a>
+            <a href="contact.html"class="active" >Contact</a>
+        </div>
+        
+          </nav>
     </header>
 
     <section class="cv">
@@ -36,5 +49,16 @@
     <footer>
         <p>&copy; 2024 Ayush Jadhav. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const togglebutton = document.getElementsByClassName("toggle-button")[0];
+        const navbarlinks = document.getElementsByClassName("navbar-links")[0];
+  
+        togglebutton.addEventListener("click", () => {
+          navbarlinks.classList.toggle("active");
+        });
+      </script>
+    
+    
 </body>
 </html>

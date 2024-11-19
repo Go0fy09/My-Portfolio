@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Hello, coder</title>
+</head>
+<style>
+    /* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: #f0f0f0;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #d91212;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">AYUSH JADHAV</a>
+            <div class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="navbar-links">
+                <a href="/index.html" class="active">Home</a>
+                <a href="/services.html">Services</a>
+                <a href="/skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="Cvv.html">CV</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="/myprofile-removebg.png" alt="Profile Image">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <br><span>AYUSH JADHAV</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>
+                Full Stack Web Developer who loves turning ideas into interactive digital experiences. 
+                With a knack for both front-end finesse and back-end strength, I build sleek, responsive websites 
+                that are as functional as they are beautiful. Let's create something amazing together!
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/_aayyuusshhhh_"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Ayush Jadhav. All Rights Reserved.</p>
+    </footer>
+    <script>
+        const toggleButton = document.querySelector(".toggle-button");
+        const navbarLinks = document.querySelector(".navbar-links");
+
+        toggleButton.addEventListener("click", () => {
+            navbarLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
